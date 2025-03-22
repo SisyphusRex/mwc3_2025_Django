@@ -1,0 +1,38 @@
+<h1> Todo List ?</h1>
+  <p>To Edit a Beverage, Double-Click on the row.</p>
+  <a href="{% url 'add' %}" class="btn btn-primary float-end">Add New</a>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <tr>
+
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Start Date</th>
+        <th>Start Time</th>
+        <th>End Date</th>
+        <th>End Time</th>
+
+      </tr>
+    </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+      <tr>
+
+        <td>{{ item.item_name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.start_date }}</td>
+        <td>{{ item.start_time }}</td>
+        <td>{{ item.end_date }}</td>
+        <td>{{ item.end_time }}</td>
+        <td class="text-end">
+          <a href="{url 'delete' %}" class="btn btn-danger">Delete</a>
+
+        </td>
+
+      </tr>
+      {% endfor %}
+      </tr>
+    </tbody>
+  </table>
